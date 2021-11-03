@@ -18,7 +18,6 @@ inizia.addEventListener("click",function(){
     console.log("ho cliccato crazy", numeroCaselle);
   }; 
 
-
   init(numeroCaselle);
 })
 
@@ -33,6 +32,9 @@ inizia.addEventListener("click",function(){
     } else{
       sq.classList.add("crazy");
     }
+
+    sq.addEventListener("click", clickCasella);
+
     target.append(sq);
     return sq;
   }
@@ -43,4 +45,9 @@ inizia.addEventListener("click",function(){
       sq.innerHTML = i + 1;
     }
 
+  }
+
+  function clickCasella(event){
+    console.log(event.target.innerText);
+    this.classList.add("clicked");
   }
