@@ -3,6 +3,7 @@ const listNumbers = [];
 const inizia = document.getElementById('inizia');
 let difficolta = document.getElementById('difficolta');
 
+
 inizia.addEventListener("click",function(){
   console.log(difficolta.value);
   container.innerHTML = "";
@@ -50,4 +51,19 @@ inizia.addEventListener("click",function(){
   function clickCasella(event){
     console.log(event.target.innerText);
     this.classList.add("clicked");
+  }
+
+
+  // function generateBombs(bombs) {
+  //   bombs = [];
+  //   while(bombs.length < 16) {
+  //     const bomb = getRandomInt(1, cellNumbers);
+  //     if(!bombs.includes(bomb)) bombs.push(bomb);
+  //   }
+  
+  //   return bombs;
+  // }
+
+  function getRandomInt(min, max){
+    return Math.floor(Math.random() * (max - min + 1) + min);
   }
